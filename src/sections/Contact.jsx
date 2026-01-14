@@ -1,11 +1,4 @@
-import {
-  Mail,
-  Phone,
-  MapPin,
-  Send,
-  CheckCircle,
-  AlertCircle,
-} from "lucide-react";
+import { Mail, MapPin, Send, CheckCircle, AlertCircle } from "lucide-react";
 import { Button } from "@/components/Button";
 import { useState } from "react";
 import emailjs from "@emailjs/browser";
@@ -14,19 +7,13 @@ const contactInfo = [
   {
     icon: Mail,
     label: "Email",
-    value: "pedro@example.com",
-    href: "mailto:pedro@example.com",
-  },
-  {
-    icon: Phone,
-    label: "Phone",
-    value: "+1 (555) 123-4567",
-    href: "tel:+15551234567",
+    value: "meetmehta1103@gmail.com",
+    href: "mailto:meetmehta1103@gmail.com",
   },
   {
     icon: MapPin,
     label: "Location",
-    value: "San Francisco, CA",
+    value: "Mumbai, India",
     href: "#",
   },
 ];
@@ -75,7 +62,7 @@ export const Contact = () => {
         message: "Message sent successfully! I'll get back to you soon.",
       });
       setFormData({ name: "", email: "", message: "" });
-    } catch (err) {
+    } catch (error) {
       console.error("EmailJS error:", error);
       setSubmitStatus({
         type: "error",
@@ -209,7 +196,7 @@ export const Contact = () => {
           </div>
 
           {/* Contact Info */}
-          <div className="space-y-6 animate-fade-in animation-delay-400">
+          <div className="flex flex-col gap-6 justify-between animate-fade-in animation-delay-400">
             <div className="glass rounded-3xl p-8">
               <h3 className="text-xl font-semibold mb-6">
                 Contact Information

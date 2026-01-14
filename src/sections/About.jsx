@@ -40,31 +40,29 @@ export const About = () => {
             </div>
 
             <h2 className="text-4xl md:text-5xl font-bold leading-tight animate-fade-in animation-delay-100 text-secondary-foreground">
-              Building the future,
+              Crafting modern frontends,
               <span className="font-serif italic font-normal text-white">
                 {" "}
-                one component at a time.
+                built to last.
               </span>
             </h2>
 
             <div className="space-y-4 text-muted-foreground animate-fade-in animation-delay-200">
               <p>
-                I'm a passionate software engineer with over 5 years of
-                experience crafting digital products that make a difference. My
-                journey started with a curiosity for how things work on the web,
-                and it has evolved into a deep expertise in modern frontend
-                technologies.
+                Skilled Frontend Developer with 3 years of experience delivering
+                scalable and performant web applications using React JS and Next
+                JS.
               </p>
               <p>
-                I specialize in React, Next.js, and TypeScript, building
-                everything from sleek landing pages to complex enterprise
-                applications. My approach combines technical excellence with a
-                keen eye for design and user experience.
+                Known for driving user engagement through intuitive UI/UX
+                design, with a strong focus on clean, maintainable code
+                architecture, refactoring, and real-time production monitoring.
               </p>
               <p>
-                When I'm not coding, you'll find me exploring new technologies,
-                contributing to open-source projects, or sharing knowledge with
-                the developer community.
+                Adept at collaborating cross-functionally to align technical
+                solutions with business goals and client needs. Passionate about
+                optimizing front-end performance and continuously enhancing user
+                experiences.
               </p>
             </div>
 

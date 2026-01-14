@@ -1,41 +1,77 @@
 import { ArrowUpRight, Github } from "lucide-react";
-import { AnimatedBorderButton } from "@/components/AnimatedBorderButton";
+
 const projects = [
   {
-    title: "Fintech Dashboard",
+    title: "CryptoBuddy",
     description:
-      "A comprehensive financial analytics platform with real-time data visualization, portfolio management, and AI-powered insights.",
-    image: "/projects/project1.png",
-    tags: ["React", "Typescript", "NodeJS"],
-    link: "#",
-    github: "#",
+      "CryptoBuddy provides latest information regarding cryptocurrency to user. It's built using React, Redux Toolkit Query, Tailwind CSS, Framer Motion, React Chart JS 2",
+    image: "/projects/cryptobuddy.jpg",
+    tags: ["React JS", "Redux Toolkit Query", "Tailwind CSS", "Framer Motion"],
+    link: "https://cryptobuddyapp.netlify.app/",
+    github: "https://github.com/Meet1103/CryptoBuddy",
   },
   {
-    title: "E-Commerce Platform",
+    title: "Master The Event Loop",
     description:
-      "A full-featured e-commerce solution with inventory management, payment processing, and analytics dashboard.",
-    image: "/projects/project2.png",
-    tags: ["Next.js", "Stripe", "PostgreSQL", "Tailwind"],
-    link: "#",
-    github: "#",
+      "Group project: This project is based on how the Javascript event loop works under the hood. It covers topics like call stack, web APIs, callback queue, microtask queue, and event loop mechanism.",
+    image: "/projects/event-loop.jpg",
+    tags: ["React JS", "Redux", "Styled Components"],
+    link: "https://master-the-event-loop.netlify.app/",
+    github: "https://github.com/Meet1103/master-the-event-loop",
   },
   {
-    title: "AI Writing Assistant",
+    title: "Todo App",
     description:
-      "An intelligent writing tool powered by GPT-4, helping users create better content faster.",
-    image: "/projects/project3.png",
-    tags: ["React", "OpenAI", "Python", "FastAPI"],
-    link: "#",
-    github: "#",
+      "Todo app is built using React JS. Users can add, complete, update and delete todo. Also Todo list has functionality of drag and drop.",
+    image: "/projects/react-todo-app.jpg",
+    tags: ["React JS", "Bootstrap", "React Beautiful DnD"],
+    link: "https://meet1103.github.io/react-todo-app/",
+    github: "https://github.com/Meet1103/react-todo-app",
   },
   {
-    title: "Project Management Tool",
+    title: "Memory Game",
     description:
-      "A collaborative workspace for teams with real-time updates, task tracking, and integrations.",
-    image: "/projects/project4.png",
-    tags: ["Next.js", "Socket.io", "MongoDB", "Redis"],
-    link: "#",
-    github: "#",
+      "Memory Game is built using React JS. User can select difficulty level, restart game at any given time and see result after they finish playing game.",
+    image: "/projects/memory-game.jpg",
+    tags: ["React JS"],
+    link: "https://memorygameapplication.netlify.app/",
+    github: "https://github.com/Meet1103/react-memory-game",
+  },
+  {
+    title: "Weather App",
+    description:
+      "Weather App is built using React JS. User can search for any city and see current weather information.",
+    image: "/projects/weather-app.jpg",
+    tags: ["React JS"],
+    link: "https://meet1103.github.io/weather-app/",
+    github: "https://github.com/Meet1103/weather-app",
+  },
+  {
+    title: "News App",
+    description:
+      "It is news app created using react and react-router , which list all news channels fetched from news api and on clicking on any news channel , it list all articles of particular news channel.",
+    image: "/projects/news-app.jpg",
+    tags: ["React JS"],
+    link: "https://news-web-application.herokuapp.com/",
+    github: "https://github.com/Meet1103/news-app",
+  },
+  {
+    title: "Kitten World",
+    description:
+      "A simple react app which list cute kitties. Kitties can be filtered through searchfield.",
+    image: "/projects/kitten-world.jpg",
+    tags: ["React JS"],
+    link: "https://meet1103.github.io/kitten-world-app/",
+    github: "https://github.com/Meet1103/kitten-world-app",
+  },
+  {
+    title: "CSS Cool Generator",
+    description:
+      "It is news app created using react and react-router , which list all news channels fetched from news api and on clicking on any news channel , it list all articles of particular news channel.",
+    image: "/projects/css-gradient.jpg",
+    tags: ["CSS3", "JavaScript"],
+    link: "https://meet1103.github.io/Css-Cool-Generator/",
+    github: "https://github.com/Meet1103/Css-Cool-Generator",
   },
 ];
 
@@ -130,14 +166,6 @@ export const Projects = () => {
               </div>
             </div>
           ))}
-        </div>
-
-        {/* View All CTA */}
-        <div className="text-center mt-12 animate-fade-in animation-delay-500">
-          <AnimatedBorderButton>
-            View All Projects
-            <ArrowUpRight className="w-5 h-5" />
-          </AnimatedBorderButton>
         </div>
       </div>
     </section>

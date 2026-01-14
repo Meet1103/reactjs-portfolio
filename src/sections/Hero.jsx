@@ -1,3 +1,4 @@
+import { useMemo } from "react";
 import { Button } from "@/components/Button";
 import {
   ArrowRight,
@@ -5,32 +6,62 @@ import {
   Github,
   Linkedin,
   Twitter,
-  Download,
 } from "lucide-react";
-import { AnimatedBorderButton } from "../components/AnimatedBorderButton";
+
+function mulberry32(seed) {
+  let a = seed >>> 0;
+  return function () {
+    a = (a + 0x6d2b79f5) >>> 0;
+    let t = a;
+    t = Math.imul(t ^ (t >>> 15), t | 1);
+    t ^= t + Math.imul(t ^ (t >>> 7), t | 61);
+    return ((t ^ (t >>> 14)) >>> 0) / 4294967296;
+  };
+}
 
 const skills = [
-  "React",
-  "Next.js",
+  "HTML5",
+  "CSS3",
+  "JavaScript",
   "TypeScript",
-  "Node.js",
-  "GraphQL",
-  "PostgreSQL",
-  "MongoDB",
-  "Redis",
-  "Docker",
-  "AWS",
-  "Vercel",
+  "React JS",
+  "Next JS",
   "Tailwind CSS",
-  "Prisma",
-  "Jest",
-  "Cypress",
-  "Figma",
+  "Shadcn UI",
+  "Node JS",
+  "Express JS",
+  "RESTful APIs",
+  "Strapi",
+  "React Query",
+  "React Hook Form",
+  "Redux",
+  "Zustand",
   "Git",
-  "GitHub Actions",
 ];
 
 export const Hero = () => {
+  const scrollToContact = () => {
+    const el = document.getElementById("contact");
+    if (!el) return;
+
+    const y = el.getBoundingClientRect().top + window.scrollY;
+    window.scrollTo({ top: y, behavior: "smooth" });
+  };
+
+  const dots = useMemo(
+    () =>
+      Array.from({ length: 30 }, (_, i) => {
+        const rand = mulberry32(i + 1);
+        return {
+          left: `${rand() * 100}%`,
+          top: `${rand() * 100}%`,
+          duration: 15 + rand() * 20,
+          delay: rand() * 5,
+        };
+      }),
+    []
+  );
+
   return (
     <section className="relative min-h-screen flex items-center overflow-hidden">
       {/* Bg */}
@@ -45,17 +76,15 @@ export const Hero = () => {
 
       {/* Green Dots */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        {[...Array(30)].map((_, i) => (
+        {dots.map((dot, i) => (
           <div
-            className="absolute w-1.5 h-1.5 rounded-full opacity-60"
+            key={i}
+            className="absolute w-1.5 h-1.5 rounded-full opacity-60 bg-primary"
             style={{
-              backgroundColor: "#20B2A6",
-              left: `${Math.random() * 100}%`,
-              top: `${Math.random() * 100}%`,
-              animation: `slow-drift ${
-                15 + Math.random() * 20
-              }s ease-in-out infinite`,
-              animationDelay: `${Math.random() * 5}s`,
+              left: dot.left,
+              top: dot.top,
+              animation: `slow-drift ${dot.duration}s ease-in-out infinite`,
+              animationDelay: `${dot.delay}s`,
             }}
           />
         ))}
@@ -69,37 +98,33 @@ export const Hero = () => {
             <div className="animate-fade-in">
               <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass text-sm text-primary">
                 <span className="w-2 h-2 bg-primary rounded-full animate-pulse" />
-                Software Engineer • React Specialist
+                Software Engineer • Frontend Specialist
               </span>
             </div>
 
             {/* Headline */}
             <div className="space-y-4">
               <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold leading-tight animate-fade-in animation-delay-100">
-                Crafting <span className="text-primary glow-text">digital</span>
+                Building <span className="text-primary glow-text">modern</span>
                 <br />
-                experiences with
+                frontends with
                 <br />
                 <span className="font-serif italic font-normal text-white">
-                  precision.
+                  observability.
                 </span>
               </h1>
               <p className="text-lg text-muted-foreground max-w-lg animate-fade-in animation-delay-200">
-                Hi, I'm Pedro Machado — a software engineer specializing in
-                React, Next.js, and TypeScript. I build scalable, performant web
-                applications that users love.
+                I build React/Next.js experiences that feel effortless—clean UI,
+                maintainable code, and performance you can measure. 3 years
+                shipping production apps with teams and clients.
               </p>
             </div>
 
             {/* CTAs */}
             <div className="flex flex-wrap gap-4 animate-fade-in animation-delay-300">
-              <Button size="lg">
+              <Button size="lg" onClick={scrollToContact}>
                 Contact Me <ArrowRight className="w-5 h-5" />
               </Button>
-              <AnimatedBorderButton>
-                <Download className="w-5 h-5" />
-                Download CV
-              </AnimatedBorderButton>
             </div>
 
             {/* Social Links */}
@@ -148,7 +173,7 @@ export const Hero = () => {
                 </div>
                 {/* Stats Badge */}
                 <div className="absolute -top-4 -left-4 glass rounded-xl px-4 py-3 animate-float animation-delay-500">
-                  <div className="text-2xl font-bold text-primary">5+</div>
+                  <div className="text-2xl font-bold text-primary">3+</div>
                   <div className="text-xs text-muted-foreground">
                     Years Exp.
                   </div>
