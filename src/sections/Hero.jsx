@@ -1,12 +1,6 @@
 import { useMemo } from "react";
 import { Button } from "@/components/Button";
-import {
-  ArrowRight,
-  ChevronDown,
-  Github,
-  Linkedin,
-  Twitter,
-} from "lucide-react";
+import { ArrowRight, ChevronDown, Github, Linkedin } from "lucide-react";
 
 function mulberry32(seed) {
   let a = seed >>> 0;
@@ -131,9 +125,11 @@ export const Hero = () => {
             <div className="flex items-center gap-4 animate-fade-in animation-delay-400">
               <span className="text-sm text-muted-foreground">Follow me: </span>
               {[
-                { icon: Github, href: "#" },
-                { icon: Linkedin, href: "#" },
-                { icon: Twitter, href: "#" },
+                { icon: Github, href: "https://github.com/Meet1103" },
+                {
+                  icon: Linkedin,
+                  href: "https://www.linkedin.com/in/meetmehta1103",
+                },
               ].map((social, idx) => (
                 <a
                   key={idx}
