@@ -53,7 +53,7 @@ export const Hero = () => {
           delay: rand() * 5,
         };
       }),
-    []
+    [],
   );
 
   return (
@@ -99,18 +99,20 @@ export const Hero = () => {
             {/* Headline */}
             <div className="space-y-4">
               <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold leading-tight animate-fade-in animation-delay-100">
-                Building <span className="text-primary glow-text">modern</span>
+                Building{" "}
+                <span className="text-primary glow-text">scalable</span>
                 <br />
-                frontends with
+                software &
                 <br />
                 <span className="font-serif italic font-normal text-white">
-                  observability.
+                  great user experiences.
                 </span>
               </h1>
               <p className="text-lg text-muted-foreground max-w-lg animate-fade-in animation-delay-200">
-                I build React/Next.js experiences that feel effortless—clean UI,
-                maintainable code, and performance you can measure. 3 years
-                shipping production apps with teams and clients.
+                I build modern web applications, backend systems, and AI-powered
+                products that scale. With 3+ years of experience across React,
+                Next.js, Node.js, TypeScript, PostgreSQL, and AI agents, I enjoy
+                creating software that is fast, reliable, and impactful.
               </p>
             </div>
 

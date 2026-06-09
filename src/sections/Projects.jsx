@@ -2,6 +2,34 @@ import { ArrowUpRight, Github } from "lucide-react";
 
 const projects = [
   {
+    title: "Real-Time Chat Application",
+    description:
+      "A real-time chat application built using React, Node.js, and Socket.IO.",
+    image: "/projects/websocket-demo.png",
+    tags: ["React JS", "Node.js", "Socket.IO"],
+    link: "https://github.com/Meet1103/realtime-chat-application",
+    github: "https://github.com/Meet1103/realtime-chat-application",
+  },
+  {
+    title: "Custom AI Agent (Langgraph)",
+    description:
+      "Built a terminal-based Custom AI Agent using LangGraph, LangChain, and Node.js with streaming LLM responses, Tavily web search integration, ToolNode/StateGraph workflows, and MemorySaver-based conversation persistence.",
+    image: "/projects/custom-ai-agent.png",
+    tags: ["Node.js", "LangGraph", "LangChain", "Tavily API"],
+    link: "https://github.com/Meet1103/custom-ai-agent",
+    github: "https://github.com/Meet1103/custom-ai-agent",
+  },
+  {
+    title: "Refund AI Agent",
+    description:
+      "Built a Refund AI Agent using LangChain, OpenAI APIs, and Node.js that reads customer support emails, identifies canceled prepaid orders, and assists in refund processing with tool calling, human approvals, and agent memory.",
+    image: "/projects/refund-ai-agent.png",
+    tags: ["Node.js", "LangChain", "OpenAI APIs"],
+    link: "https://github.com/Meet1103/refund-ai-agent",
+    github: "https://github.com/Meet1103/refund-ai-agent",
+  },
+
+  {
     title: "CryptoBuddy",
     description:
       "CryptoBuddy provides latest information regarding cryptocurrency to user. It's built using React, Redux Toolkit Query, Tailwind CSS, Framer Motion, React Chart JS 2",

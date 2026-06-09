@@ -40,7 +40,7 @@ export const About = () => {
             </div>
 
             <h2 className="text-4xl md:text-5xl font-bold leading-tight animate-fade-in animation-delay-100 text-secondary-foreground">
-              Crafting modern frontends,
+              Crafting scalable software,
               <span className="font-serif italic font-normal text-white">
                 {" "}
                 built to last.
@@ -49,20 +49,19 @@ export const About = () => {
 
             <div className="space-y-4 text-muted-foreground animate-fade-in animation-delay-200">
               <p>
-                Skilled Frontend Developer with 3 years of experience delivering
-                scalable and performant web applications using React JS and Next
-                JS.
+                Full Stack Engineer with 3+ years of experience building modern
+                web applications, scalable backend systems, and AI-powered
+                products.
               </p>
               <p>
-                Known for driving user engagement through intuitive UI/UX
-                design, with a strong focus on clean, maintainable code
-                architecture, refactoring, and real-time production monitoring.
+                I specialize in React, Next.js, Node.js, TypeScript, PostgreSQL,
+                and modern AI technologies, with a focus on creating performant,
+                maintainable, and user-centric solutions.
               </p>
               <p>
-                Adept at collaborating cross-functionally to align technical
-                solutions with business goals and client needs. Passionate about
-                optimizing front-end performance and continuously enhancing user
-                experiences.
+                From intuitive frontends to robust APIs, real-time systems, and
+                AI agents, I enjoy solving complex problems and turning ideas
+                into impactful products.
               </p>
             </div>
 
